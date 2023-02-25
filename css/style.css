@@ -103,7 +103,9 @@ header {
 .hamburger span:nth-child(2) { top: 50%; }
 .hamburger span:last-child { top: 72%; }
 
-.hamburger.close span { width: 36px;}
+.hamburger.close span { 
+  width: 36px;
+  background-color: #050507;}
 .hamburger.close span:first-child { top: 50%; left: 3px; transform: rotate(40deg);}
 .hamburger.close span:nth-child(2) { left: 3px; transform: rotate(40deg); opacity: 0;}
 .hamburger.close span:last-child { top: 50%; left: 3px; transform: rotate(-40deg); }
@@ -213,10 +215,7 @@ Information
 Gallery
 -------------------------------------------*/
 #gallery {
-
   padding-top: 140px;
-  
-
 }
 #gallery .list li {
   margin-bottom: 60px;
@@ -238,8 +237,11 @@ Gallery
   text-align: right;
 }
 
-
-
+@media screen and (max-width: 480px) {
+  #gallery {
+  padding-top: 100px;
+  }
+}
 /*-------------------------------------------
 Access
 -------------------------------------------*/
@@ -258,6 +260,9 @@ Access
   margin-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
+  #access {
+    padding-top: 100px;
+  }
   #access .address {
     margin: auto 20px auto 20px;
   }
@@ -304,6 +309,8 @@ Contact
 @media screen and (max-width: 480px) {
   .Form {
     margin-top: 40px;
+    padding-top: 100px;
+    padding-bottom: 150px;
   }
 }
 .Form-Item {
