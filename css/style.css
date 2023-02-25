@@ -138,7 +138,7 @@ Information
 Gallery
 -------------------------------------------*/
 #gallery {
-  margin-bottom: 480px;
+  margin-bottom: 200px;
 }
 #gallery .list li {
   margin-bottom: 60px;
@@ -146,12 +146,21 @@ Gallery
 #gallery .list li img {
   width: 48%;
 }
+
+@media screen and (max-width: 480px) {
+  #gallery .list li img {
+  width: 75%;
+  }
+}
+
 #gallery .list li:nth-child(odd) {
   text-align: left;
 }
 #gallery .list li:nth-child(even) {
   text-align: right;
 }
+
+
 
 /*-------------------------------------------
 Access
