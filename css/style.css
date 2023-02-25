@@ -53,10 +53,12 @@ header
 header {
   position: fixed;
   right: 20px;
-  top: 10px;
+  top: 20px;
   z-index: 800;
+  overflow: hidden;
 }
-.gnav ul{
+
+.drawer ul{
   font-size: 24px;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.05) ;
@@ -64,21 +66,73 @@ header {
   justify-content: flex-end;
   align-items: center;
 }
-.gnav ul:last-child{
+.drawer ul:last-child{
   text-shadow: none ;
 }
-.gnav ul li{
-  padding: 10px;
+.drawer ul li{
+  padding: 5px;
   margin-left: 20px;
 }
-.gnav ul li:last-child{
+.drawer ul li:last-child{
   background-color: #fff;
 }
 
-.gnav ul li:last-child a{
+.drawer ul li:last-child a{
   color: #050507;
 }
+@media screen and (max-width: 480px){
+/* ハンバーガー */
+.hamburger {
+	width: 42px;
+	height: 42px;
+  z-index: 800;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+.hamburger span {
+	display: block;
+	width: 24px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	transition: all .4s ease;
+	left: 9px;
+}
+.hamburger span:first-child { top: 28%; }
+.hamburger span:nth-child(2) { top: 50%; }
+.hamburger span:last-child { top: 72%; }
 
+.hamburger.close span { width: 36px;}
+.hamburger.close span:first-child { top: 50%; left: 3px; transform: rotate(40deg);}
+.hamburger.close span:nth-child(2) { left: 3px; transform: rotate(40deg); opacity: 0;}
+.hamburger.close span:last-child { top: 50%; left: 3px; transform: rotate(-40deg); }
+
+/* ドロワーナビ */
+.drawer {
+	background-color: rgba(0, 0, 0, .8);
+	position: fixed;
+	left: 0;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 98px 0 30px;
+	overflow: auto;
+	transition: all .4s ease;
+	z-index: 100;
+}
+.drawer.show { top: 0; }
+.drawer ul{
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.05) ;
+  flex-flow: column;
+}
+.drawer ul.main_nav li { margin-top: 30px; }
+
+
+}
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
@@ -133,7 +187,26 @@ Information
 #information .info-date-ja {
   font-size: 1.125rem;
 }
-
+@media screen and (max-width: 480px) {
+  #information .info-time-en {
+    font-size: 16px;
+  }
+  #information .info-time-en {
+    font-size: 16px;
+  }
+  #information .info-place {
+    font-size: 20px;
+  }
+  #information .info-place {
+    font-size: 16px;
+  }
+  .site-title {
+    font-size: 32px;
+  }
+  .section-title{
+    font-size: 26px;
+  }
+}
 /*-------------------------------------------
 Gallery
 -------------------------------------------*/
