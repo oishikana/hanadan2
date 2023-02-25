@@ -7,6 +7,7 @@ html {
 body {
   color: #050507;
   font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 a {
@@ -51,24 +52,32 @@ header
 -------------------------------------------*/
 header {
   position: fixed;
-  right: 30px;
+  right: 20px;
   top: 10px;
   z-index: 800;
 }
 .gnav ul{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.05) ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
+.gnav ul:last-child{
+  text-shadow: none ;
+}
 .gnav ul li{
   padding: 10px;
   margin-left: 20px;
 }
+.gnav ul li:last-child{
+  background-color: #fff;
+}
 
+.gnav ul li:last-child a{
+  color: #050507;
+}
 
 /*-------------------------------------------
 Mainvisual
