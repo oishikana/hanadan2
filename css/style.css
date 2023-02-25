@@ -138,7 +138,7 @@ Information
 Gallery
 -------------------------------------------*/
 #gallery {
-  margin-bottom: 480px;
+  margin-bottom: 200px;
 }
 #gallery .list li {
   margin-bottom: 60px;
@@ -146,12 +146,21 @@ Gallery
 #gallery .list li img {
   width: 48%;
 }
+
+@media screen and (max-width: 480px) {
+  #gallery .list li img {
+  width: 75%;
+  }
+}
+
 #gallery .list li:nth-child(odd) {
   text-align: left;
 }
 #gallery .list li:nth-child(even) {
   text-align: right;
 }
+
+
 
 /*-------------------------------------------
 Access
@@ -166,8 +175,14 @@ Access
   font-weight: 400;
   margin-bottom: 20px;
 }
+
 #access .address {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  #access .address {
+    margin: auto 20px auto 20px;
+  }
 }
 #access .contact {
   margin-bottom: 30px;
@@ -182,6 +197,19 @@ Access
 #access .btn:hover {
   background-color: #050507;
 }
+#access .gmap iframe {
+  margin: 0 auto;
+  width: 600px;
+  height: 450px;
+}
+@media screen and (max-width: 480px) {
+  #access .gmap iframe {
+  margin: 0 auto;
+  width: 300px;
+  height: 225px;
+  }
+}
+
 
 /*-------------------------------------------
 Contact
