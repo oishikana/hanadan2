@@ -1,10 +1,14 @@
 // JavaScript Document
 
 $(function(){
-	// ドロワーナビの開閉
-	$(".hamburger").click(function(){
-		$(".drawer").toggleClass("show");
-		$("header").toggleClass("bgclear");
-		$(this).toggleClass("close");
+	//ハンバーガークリック時の動き
+	$('.hamburger').click (function(){
+		$(this).toggleClass('close');
+		$('.drawer').toggleClass('show');
+	});
+	//ナビゲーションクリック時の動き
+	$('.drawer ul li a').click(function(){
+		$('.hamburger').removeClass('close');
+		$('.drawer').removeClass('show');
 	});
 });
