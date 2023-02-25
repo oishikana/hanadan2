@@ -26,7 +26,7 @@ li {
   font-size: 6.25rem;
   font-weight: 300;
   letter-spacing: 0.03em;
-  margin: 100px 0;
+  padding: 100px 0;
 }
 .section-title {
   border-bottom: solid 1px #fff;
@@ -52,33 +52,33 @@ header
 -------------------------------------------*/
 header {
   position: fixed;
-  right: 20px;
-  top: 20px;
   z-index: 800;
   overflow: hidden;
+  width: 100vw;
 }
 
 .drawer ul{
+  height: 80px;
+  padding-right: 20px;
   font-size: 24px;
   font-weight: 700;
-  text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.05) ;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-.drawer ul:last-child{
-  text-shadow: none ;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .drawer ul li{
   padding: 5px;
   margin-left: 20px;
 }
 .drawer ul li:last-child{
-  background-color: #fff;
+  background-color: #050507;
 }
-
-.drawer ul li:last-child a{
+.drawer ul li a{
   color: #050507;
+}
+.drawer ul li:last-child a{
+  color: #fff;
 }
 @media screen and (max-width: 480px){
 /* ハンバーガー */
@@ -110,7 +110,7 @@ header {
 
 /* ドロワーナビ */
 .drawer {
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(255, 255, 255, 0.6);
 	position: fixed;
 	left: 0;
 	top: -100%;
@@ -124,6 +124,8 @@ header {
 }
 .drawer.show { top: 0; }
 .drawer ul{
+  height: auto;
+  background-color: transparent;
   font-size: 24px;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgb(0, 0, 0, 0.05) ;
@@ -168,9 +170,9 @@ Mainvisual
 /*-------------------------------------------
 Information
 -------------------------------------------*/
-#information {
+/* #information {
   margin-bottom: 140px;
-}
+} */
 #information .info-date-en {
   display: block;
   font-size: 1.5rem;
@@ -211,7 +213,8 @@ Information
 Gallery
 -------------------------------------------*/
 #gallery {
-  margin-bottom: 480px;
+  padding-top: 140px;
+  
 }
 #gallery .list li {
   margin-bottom: 60px;
@@ -219,6 +222,13 @@ Gallery
 #gallery .list li img {
   width: 48%;
 }
+
+@media screen and (max-width: 480px) {
+  #gallery .list li img {
+  width: 75%;
+  }
+}
+
 #gallery .list li:nth-child(odd) {
   text-align: left;
 }
@@ -226,11 +236,13 @@ Gallery
   text-align: right;
 }
 
+
+
 /*-------------------------------------------
 Access
 -------------------------------------------*/
 #access {
-  margin-bottom: 160px;
+  padding-top: 200px;
   position: relative;
   z-index: 20;
 }
@@ -239,8 +251,14 @@ Access
   font-weight: 400;
   margin-bottom: 20px;
 }
+
 #access .address {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  #access .address {
+    margin: auto 20px auto 20px;
+  }
 }
 #access .contact {
   margin-bottom: 30px;
@@ -255,6 +273,19 @@ Access
 #access .btn:hover {
   background-color: #050507;
 }
+#access .gmap iframe {
+  margin: 0 auto;
+  width: 600px;
+  height: 450px;
+}
+@media screen and (max-width: 480px) {
+  #access .gmap iframe {
+  margin: 0 auto;
+  width: 300px;
+  height: 225px;
+  }
+}
+
 
 /*-------------------------------------------
 Contact
@@ -264,7 +295,9 @@ Contact
   margin-left: auto;
   margin-right: auto;
   max-width: 720px;
+  padding-top: 160px;
   padding-bottom: 150px;
+  
 }
 @media screen and (max-width: 480px) {
   .Form {
